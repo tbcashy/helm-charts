@@ -5,7 +5,8 @@
 A Helm chart for Kubernetes
 
 ## Deployment instructions
-See the [Terrateam docs](https://docs.terrateam.io/self-hosted/overview) for deployment instructions.
+`helm repo add swetrix https://tbcashy.github.io/helm-charts/`  
+`helm install my-swetrix swetrix/swetrix --version 1.0.1`
 
 ## Values
 
