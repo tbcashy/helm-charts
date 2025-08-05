@@ -171,6 +171,11 @@ spec:
                 secretKeyRef:
                   name: {{ include "swetrix.fullname" . }}-secrets
                   key: PASSWORD
+            - name: EMAIL
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "swetrix.fullname" . }}-secrets
+                  key: EMAIL
             - name: JWT_ACCESS_TOKEN_SECRET
               valueFrom:
                 secretKeyRef:
