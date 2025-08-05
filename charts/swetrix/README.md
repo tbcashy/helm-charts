@@ -1,12 +1,12 @@
 # swetrix
 
-![Version: 1.0.6](https://img.shields.io/badge/Version-1.0.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.3.1](https://img.shields.io/badge/AppVersion-3.3.1-informational?style=flat-square)
+![Version: 1.0.7](https://img.shields.io/badge/Version-1.0.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.3.1](https://img.shields.io/badge/AppVersion-3.3.1-informational?style=flat-square)
 
 A Swetrix Helm chart for Kubernetes
 
 ## Deployment instructions
 `helm repo add swetrix https://tbcashy.github.io/helm-charts/`  
-`helm install my-swetrix swetrix/swetrix --version 1.0.6`
+`helm install my-swetrix swetrix/swetrix --version 1.0.7`
 
 ## Values
 
@@ -32,6 +32,7 @@ A Swetrix Helm chart for Kubernetes
 | clickhouse.keeper.enabled | bool | `false` |  |
 | clickhouse.replicaCount | int | `1` |  |
 | clickhouse.shards | int | `1` |  |
+| frontend.apiUrl | string | `"localhost"` |  |
 | frontend.env | object | `{}` |  |
 | frontend.image.repository | string | `"swetrix/swetrix-fe"` |  |
 | frontend.image.tag | string | `"v3.3.1"` |  |

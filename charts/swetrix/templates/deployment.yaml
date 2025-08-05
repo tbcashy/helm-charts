@@ -56,7 +56,7 @@ spec:
           {{- end }}
           env:
             - name: API_URL
-              value: "http://{{ include "swetrix.fullname" . }}-backend:5005"
+              value: "{{ .Values.frontend.apiUrl }}"
           {{- with .Values.frontend.env }}
             {{- range $key, $value := . }}
             - name: {{ $key }}
