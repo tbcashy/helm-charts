@@ -1,0 +1,9 @@
+dependencies:
+- name: redis
+  repository: https://charts.bitnami.com/bitnami
+  version: 21.2.13
+- name: clickhouse
+  repository: https://charts.bitnami.com/bitnami
+  version: 9.4.0
+digest: sha256:a9f63c20232c33889c23dcf024a4c7952b239c6917c73f50c6c13a88f3af1158
+generated: "2025-08-03T14:38:11.889545+02:00"

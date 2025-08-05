@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "swetrix.fullname" . }}-frontend
+  labels:
+    {{- include "swetrix.frontend.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 3000
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "swetrix.frontend.selectorLabels" . | nindent 4 }}
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "swetrix.fullname" . }}-backend
+  labels:
+    {{- include "swetrix.backend.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 5005
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "swetrix.backend.selectorLabels" . | nindent 4 }}
