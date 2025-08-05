@@ -1,6 +1,6 @@
 repos:
-  - repo: https://github.com/tbcashy/helm-charts
-    rev: HEAD
+  - repo: https://github.com/norwoodj/helm-docs
+    rev:  "v1.14.2"
     hooks:
       - id: helm-docs
         args:
