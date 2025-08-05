@@ -1,12 +1,12 @@
 # swetrix
 
-![Version: 1.0.3](https://img.shields.io/badge/Version-1.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.3.1](https://img.shields.io/badge/AppVersion-3.3.1-informational?style=flat-square)
+![Version: 1.0.4](https://img.shields.io/badge/Version-1.0.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.3.1](https://img.shields.io/badge/AppVersion-3.3.1-informational?style=flat-square)
 
-A Helm chart for Kubernetes
+A Swetrix Helm chart for Kubernetes
 
 ## Deployment instructions
 `helm repo add swetrix https://tbcashy.github.io/helm-charts/`  
-`helm install my-swetrix swetrix/swetrix --version 1.0.3`
+`helm install my-swetrix swetrix/swetrix --version 1.0.4`
 
 ## Values
 
@@ -58,6 +58,7 @@ A Helm chart for Kubernetes
 | redis.architecture | string | `"standalone"` |  |
 | redis.enabled | bool | `true` |  |
 | resources | object | `{}` |  |
+| secrets.email | string | `"admin@example.com"` |  |
 | secrets.enabled | bool | `true` |  |
 | securityContext | object | `{}` |  |
 | service.port | int | `80` |  |

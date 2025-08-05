@@ -65,6 +65,7 @@ backend:
 
 secrets:
   enabled: true
+  email: "admin@example.com"
   #password: "" // Auto generated if not provided
 
 redis:
