@@ -77,7 +77,7 @@ charts/*.tgz
 *.yml.bak
 
 # Secrets and sensitive files
-secrets.yaml
+# secrets.yaml
 *.secret
 *.key
 *.pem
