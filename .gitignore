@@ -1,7 +1,3 @@
-# Helm chart specific ignores
-charts/
-.helmignore
-
 # IDE and editor files
 .idea/
 .vscode/
