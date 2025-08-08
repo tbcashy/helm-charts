@@ -191,12 +191,10 @@ spec:
                 secretKeyRef:
                   name: {{ include "swetrix.fullname" . }}-secrets
                   key: OIDC_CLIENT_SECRET
-          {{- with .Values.backend.env }}
-            {{- range $key, $value := . }}
-            - name: {{ $key }}
-              value: {{ $value | quote }}
+            {{- range .Values.backend.env }}
+            - name: {{ .name }}
+              value: {{ .value | quote }}
             {{- end }}
-          {{- end }}
           {{- with .Values.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
