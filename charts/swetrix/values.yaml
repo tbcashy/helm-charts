@@ -67,6 +67,7 @@ backend:
 secrets:
   enabled: true
   email: "admin@example.com"
+  oidcClientSecret: ""
   #password: "" // Auto generated if not provided
 
 redis:

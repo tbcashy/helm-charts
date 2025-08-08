@@ -1,12 +1,12 @@
 # swetrix
 
-![Version: 1.0.7](https://img.shields.io/badge/Version-1.0.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.3.1](https://img.shields.io/badge/AppVersion-3.3.1-informational?style=flat-square)
+![Version: 1.0.8](https://img.shields.io/badge/Version-1.0.8-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.3.1](https://img.shields.io/badge/AppVersion-3.3.1-informational?style=flat-square)
 
 A Swetrix Helm chart for Kubernetes
 
 ## Deployment instructions
 `helm repo add swetrix https://tbcashy.github.io/helm-charts/`  
-`helm install my-swetrix swetrix/swetrix --version 1.0.7`
+`helm install my-swetrix swetrix/swetrix --version 1.0.8`
 
 ## Values
 
@@ -61,6 +61,7 @@ A Swetrix Helm chart for Kubernetes
 | resources | object | `{}` |  |
 | secrets.email | string | `"admin@example.com"` |  |
 | secrets.enabled | bool | `true` |  |
+| secrets.oidcClientSecret | string | `""` |  |
 | securityContext | object | `{}` |  |
 | service.port | int | `80` |  |
 | service.type | string | `"ClusterIP"` |  |

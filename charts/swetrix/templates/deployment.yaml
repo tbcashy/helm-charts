@@ -186,6 +186,11 @@ spec:
                 secretKeyRef:
                   name: {{ include "swetrix.fullname" . }}-secrets
                   key: JWT_REFRESH_TOKEN_SECRET
+            - name: OIDC_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "swetrix.fullname" . }}-secrets
+                  key: OIDC_CLIENT_SECRET
           {{- with .Values.backend.env }}
             {{- range $key, $value := . }}
             - name: {{ $key }}
