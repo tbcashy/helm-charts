@@ -44,6 +44,10 @@ backend:
     httpGet:
       path: /ping
       port: 5005
+  oidc:
+    enabled: false
+  registration:
+    enabled: false
   env: {}
   image:
     repository: "swetrix/swetrix-api"

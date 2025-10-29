@@ -1,12 +1,12 @@
 # swetrix
 
-![Version: 1.1.2](https://img.shields.io/badge/Version-1.1.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.1](https://img.shields.io/badge/AppVersion-4.0.1-informational?style=flat-square)
+![Version: 1.1.3](https://img.shields.io/badge/Version-1.1.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.1](https://img.shields.io/badge/AppVersion-4.0.1-informational?style=flat-square)
 
 A Swetrix Helm chart for Kubernetes
 
 ## Deployment instructions
 `helm repo add swetrix https://tbcashy.github.io/helm-charts/`  
-`helm install my-swetrix swetrix/swetrix --version 1.1.2`
+`helm install my-swetrix swetrix/swetrix --version 1.1.3`
 
 ## Values
 
@@ -25,8 +25,10 @@ A Swetrix Helm chart for Kubernetes
 | backend.ingress.tls | list | `[]` |  |
 | backend.livenessProbe.httpGet.path | string | `"/ping"` |  |
 | backend.livenessProbe.httpGet.port | int | `5005` |  |
+| backend.oidc.enabled | bool | `false` |  |
 | backend.readinessProbe.httpGet.path | string | `"/ping"` |  |
 | backend.readinessProbe.httpGet.port | int | `5005` |  |
+| backend.registration.enabled | bool | `false` |  |
 | backend.replicaCount | int | `1` |  |
 | clickhouse.enabled | bool | `true` |  |
 | clickhouse.global.security.allowInsecureImages | bool | `true` |  |
