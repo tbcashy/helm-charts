@@ -153,7 +153,7 @@ spec:
             - name: CLICKHOUSE_HOST
               value: "http://swetrix-clickhouse"
             - name: REDIS_HOST
-              value: "swetrix-redis-master"
+              value: {{ include "swetrix.fullname" . }}-redis-master
             - name: REDIS_PASSWORD
               valueFrom:
                 secretKeyRef:
