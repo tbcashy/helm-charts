@@ -1,12 +1,12 @@
 # swetrix
 
-![Version: 1.0.9](https://img.shields.io/badge/Version-1.0.9-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.3.1](https://img.shields.io/badge/AppVersion-3.3.1-informational?style=flat-square)
+![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.1](https://img.shields.io/badge/AppVersion-4.0.1-informational?style=flat-square)
 
 A Swetrix Helm chart for Kubernetes
 
 ## Deployment instructions
 `helm repo add swetrix https://tbcashy.github.io/helm-charts/`  
-`helm install my-swetrix swetrix/swetrix --version 1.0.9`
+`helm install my-swetrix swetrix/swetrix --version 1.1.0`
 
 ## Values
 
@@ -15,7 +15,7 @@ A Swetrix Helm chart for Kubernetes
 | affinity | object | `{}` |  |
 | backend.env | object | `{}` |  |
 | backend.image.repository | string | `"swetrix/swetrix-api"` |  |
-| backend.image.tag | string | `"v3.3.1"` |  |
+| backend.image.tag | string | `"v4.0.1"` |  |
 | backend.ingress.annotations | object | `{}` |  |
 | backend.ingress.className | string | `""` |  |
 | backend.ingress.enabled | bool | `false` |  |
@@ -29,13 +29,14 @@ A Swetrix Helm chart for Kubernetes
 | backend.readinessProbe.httpGet.port | int | `5005` |  |
 | backend.replicaCount | int | `1` |  |
 | clickhouse.enabled | bool | `true` |  |
+| clickhouse.image | string | `"docker.io/bitnamilegacy/clickhouse:25.6.5-debian-12-r0"` |  |
 | clickhouse.keeper.enabled | bool | `false` |  |
 | clickhouse.replicaCount | int | `1` |  |
 | clickhouse.shards | int | `1` |  |
 | frontend.apiUrl | string | `"localhost"` |  |
 | frontend.env | object | `{}` |  |
 | frontend.image.repository | string | `"swetrix/swetrix-fe"` |  |
-| frontend.image.tag | string | `"v3.3.1"` |  |
+| frontend.image.tag | string | `"v4.0.1"` |  |
 | frontend.ingress.annotations | object | `{}` |  |
 | frontend.ingress.className | string | `""` |  |
 | frontend.ingress.enabled | bool | `false` |  |
@@ -58,6 +59,7 @@ A Swetrix Helm chart for Kubernetes
 | podSecurityContext | object | `{}` |  |
 | redis.architecture | string | `"standalone"` |  |
 | redis.enabled | bool | `true` |  |
+| redis.image | string | `"docker.io/bitnamilegacy/redis:8.2.1"` |  |
 | resources | object | `{}` |  |
 | secrets.email | string | `"admin@example.com"` |  |
 | secrets.enabled | bool | `true` |  |

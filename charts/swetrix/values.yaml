@@ -17,7 +17,7 @@ frontend:
   env: {}
   image:
     repository: "swetrix/swetrix-fe"
-    tag: "v3.3.1"
+    tag: "v4.0.1"
   ingress:
     enabled: false
     className: ""
@@ -47,7 +47,7 @@ backend:
   env: {}
   image:
     repository: "swetrix/swetrix-api"
-    tag: "v3.3.1"
+    tag: "v4.0.1"
   ingress:
     enabled: false
     className: ""
@@ -68,11 +68,11 @@ secrets:
   enabled: true
   email: "admin@example.com"
   oidcClientSecret: ""
-  #password: "" // Auto generated if not provided
 
 redis:
   enabled: true
   architecture: standalone
+  image: docker.io/bitnamilegacy/redis:8.2.1
 
 clickhouse:
   enabled: true
@@ -80,6 +80,7 @@ clickhouse:
     enabled: false
   replicaCount: 1
   shards: 1
+  image: docker.io/bitnamilegacy/clickhouse:25.6.5-debian-12-r0
 
 # This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
 image:
