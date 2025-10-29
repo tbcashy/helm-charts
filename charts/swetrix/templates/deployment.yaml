@@ -151,7 +151,7 @@ spec:
             - name: CLOUDFLARE_PROXY_ENABLED
               value: "false"
             - name: CLICKHOUSE_HOST
-              value: "http://swetrix-clickhouse"
+              value: "http://{{ include "swetrix.fullname" . }}-clickhouse"
             - name: REDIS_HOST
               value: {{ include "swetrix.fullname" . }}-redis-master
             - name: REDIS_PASSWORD
