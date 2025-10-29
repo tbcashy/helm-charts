@@ -1,12 +1,12 @@
 # swetrix
 
-![Version: 1.1.5](https://img.shields.io/badge/Version-1.1.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.1](https://img.shields.io/badge/AppVersion-4.0.1-informational?style=flat-square)
+![Version: 1.1.6](https://img.shields.io/badge/Version-1.1.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.1](https://img.shields.io/badge/AppVersion-4.0.1-informational?style=flat-square)
 
 A Swetrix Helm chart for Kubernetes
 
 ## Deployment instructions
 `helm repo add swetrix https://tbcashy.github.io/helm-charts/`  
-`helm install my-swetrix swetrix/swetrix --version 1.1.5`
+`helm install my-swetrix swetrix/swetrix --version 1.1.6`
 
 ## Values
 

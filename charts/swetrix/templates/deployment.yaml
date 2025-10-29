@@ -166,35 +166,13 @@ spec:
                 secretKeyRef:
                   name: {{ include "swetrix.fullname" . }}-clickhouse
                   key: admin-password
-            - name: PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: {{ include "swetrix.fullname" . }}-secrets
-                  key: PASSWORD
-            - name: EMAIL
-              valueFrom:
-                secretKeyRef:
-                  name: {{ include "swetrix.fullname" . }}-secrets
-                  key: EMAIL
-            - name: JWT_ACCESS_TOKEN_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: {{ include "swetrix.fullname" . }}-secrets
-                  key: JWT_ACCESS_TOKEN_SECRET
-            - name: JWT_REFRESH_TOKEN_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: {{ include "swetrix.fullname" . }}-secrets
-                  key: JWT_REFRESH_TOKEN_SECRET
-            - name: OIDC_CLIENT_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: {{ include "swetrix.fullname" . }}-secrets
-                  key: OIDC_CLIENT_SECRET
             {{- range .Values.backend.env }}
             - name: {{ .name }}
               value: {{ .value | quote }}
             {{- end }}
+          envFrom:
+            - secretRef:
+                name: {{ include "swetrix.fullname" . }}-secrets
           {{- with .Values.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
