@@ -3,6 +3,25 @@ entries:
   swetrix:
   - apiVersion: v2
     appVersion: 4.0.1
+    created: "2025-10-29T19:34:16.881185113Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.13
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.4.0
+    description: A Swetrix Helm chart for Kubernetes
+    digest: c01cdc1ea59f40d2071f511ef17d8a507bda7473bb926a54c72f66c950d019f2
+    name: swetrix
+    type: application
+    urls:
+    - https://github.com/tbcashy/helm-charts/releases/download/swetrix-1.1.3/swetrix-1.1.3.tgz
+    version: 1.1.3
+  - apiVersion: v2
+    appVersion: 4.0.1
     created: "2025-10-29T19:28:27.157341435Z"
     dependencies:
     - condition: redis.enabled
@@ -229,4 +248,4 @@ entries:
     urls:
     - https://github.com/tbcashy/helm-charts/releases/download/swetrix-1.0.1/swetrix-1.0.1.tgz
     version: 1.0.1
-generated: "2025-10-29T19:28:27.157405555Z"
+generated: "2025-10-29T19:34:16.88128523Z"
