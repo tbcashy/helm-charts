@@ -1,12 +1,12 @@
 # swetrix
 
-![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.1](https://img.shields.io/badge/AppVersion-4.0.1-informational?style=flat-square)
+![Version: 1.1.1](https://img.shields.io/badge/Version-1.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.1](https://img.shields.io/badge/AppVersion-4.0.1-informational?style=flat-square)
 
 A Swetrix Helm chart for Kubernetes
 
 ## Deployment instructions
 `helm repo add swetrix https://tbcashy.github.io/helm-charts/`  
-`helm install my-swetrix swetrix/swetrix --version 1.1.0`
+`helm install my-swetrix swetrix/swetrix --version 1.1.1`
 
 ## Values
 
@@ -29,7 +29,8 @@ A Swetrix Helm chart for Kubernetes
 | backend.readinessProbe.httpGet.port | int | `5005` |  |
 | backend.replicaCount | int | `1` |  |
 | clickhouse.enabled | bool | `true` |  |
-| clickhouse.image | string | `"docker.io/bitnamilegacy/clickhouse:25.6.5-debian-12-r0"` |  |
+| clickhouse.image.repository | string | `"bitnamilegacy/clickhouse"` |  |
+| clickhouse.image.tasg | string | `"25.6.5-debian-12-r0"` |  |
 | clickhouse.keeper.enabled | bool | `false` |  |
 | clickhouse.replicaCount | int | `1` |  |
 | clickhouse.shards | int | `1` |  |
@@ -59,7 +60,8 @@ A Swetrix Helm chart for Kubernetes
 | podSecurityContext | object | `{}` |  |
 | redis.architecture | string | `"standalone"` |  |
 | redis.enabled | bool | `true` |  |
-| redis.image | string | `"docker.io/bitnamilegacy/redis:8.2.1"` |  |
+| redis.image.repository | string | `"bitnamilegacy/redis"` |  |
+| redis.image.tag | string | `"8.2.1"` |  |
 | resources | object | `{}` |  |
 | secrets.email | string | `"admin@example.com"` |  |
 | secrets.enabled | bool | `true` |  |

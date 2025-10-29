@@ -72,7 +72,9 @@ secrets:
 redis:
   enabled: true
   architecture: standalone
-  image: docker.io/bitnamilegacy/redis:8.2.1
+  image: 
+    repository: bitnamilegacy/redis
+    tag: 8.2.1
 
 clickhouse:
   enabled: true
@@ -80,7 +82,9 @@ clickhouse:
     enabled: false
   replicaCount: 1
   shards: 1
-  image: docker.io/bitnamilegacy/clickhouse:25.6.5-debian-12-r0
+  image: 
+    repository: bitnamilegacy/clickhouse
+    tasg: 25.6.5-debian-12-r0
 
 # This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
 image:
