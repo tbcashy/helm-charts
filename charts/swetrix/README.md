@@ -1,12 +1,12 @@
 # swetrix
 
-![Version: 1.1.8](https://img.shields.io/badge/Version-1.1.8-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.1](https://img.shields.io/badge/AppVersion-4.0.1-informational?style=flat-square)
+![Version: 1.1.9](https://img.shields.io/badge/Version-1.1.9-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.5](https://img.shields.io/badge/AppVersion-4.0.5-informational?style=flat-square)
 
 A Swetrix Helm chart for Kubernetes
 
 ## Deployment instructions
 `helm repo add swetrix https://tbcashy.github.io/helm-charts/`  
-`helm install my-swetrix swetrix/swetrix --version 1.1.8`
+`helm install my-swetrix swetrix/swetrix --version 1.1.9`
 
 ## Values
 
@@ -15,7 +15,7 @@ A Swetrix Helm chart for Kubernetes
 | affinity | object | `{}` |  |
 | backend.env | object | `{}` |  |
 | backend.image.repository | string | `"swetrix/swetrix-api"` |  |
-| backend.image.tag | string | `"v4.0.1"` |  |
+| backend.image.tag | string | `"v4.0.5"` |  |
 | backend.ingress.annotations | object | `{}` |  |
 | backend.ingress.className | string | `""` |  |
 | backend.ingress.enabled | bool | `false` |  |
@@ -40,7 +40,7 @@ A Swetrix Helm chart for Kubernetes
 | frontend.apiUrl | string | `"localhost"` |  |
 | frontend.env | object | `{}` |  |
 | frontend.image.repository | string | `"swetrix/swetrix-fe"` |  |
-| frontend.image.tag | string | `"v4.0.1"` |  |
+| frontend.image.tag | string | `"v4.0.5"` |  |
 | frontend.ingress.annotations | object | `{}` |  |
 | frontend.ingress.className | string | `""` |  |
 | frontend.ingress.enabled | bool | `false` |  |

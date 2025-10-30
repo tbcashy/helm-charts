@@ -17,7 +17,7 @@ frontend:
   env: {}
   image:
     repository: "swetrix/swetrix-fe"
-    tag: "v4.0.1"
+    tag: "v4.0.5"
   ingress:
     enabled: false
     className: ""
@@ -51,7 +51,7 @@ backend:
   env: {}
   image:
     repository: "swetrix/swetrix-api"
-    tag: "v4.0.1"
+    tag: "v4.0.5"
   ingress:
     enabled: false
     className: ""
